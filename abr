@@ -1,0 +1,39 @@
+fonction serachKey (d e: t, A: ABR):booleen
+{...}
+debut 
+    si arbrevide(a)
+       serachKey: faux
+    finsi
+
+    si ( x = a^etiquette_noeud)
+        serachKey:=vrai
+    finsi
+
+    si (x < a^etiquette_noeud)
+        serachKey: serachKey(A^fg,e)
+    finsi
+    
+    sinon
+        serachKey:= serachKey(a^fd,e)
+    finsi
+fin
+
+
+fonction insertion (d e: t, A: ABR):entier
+{...}
+debut 
+    si arbrevide(a)
+       insertion: e
+    finsi
+
+    tantque (x != a^etiquette)
+        si ( x < ettiquette)
+            insertion( e, a^fg)
+        sinon
+            insertion(e, a^d)
+
+fin
+
+// pour la recherche, faire un tableau
+// pour l'insertion supression faire liste chainnée
+//
