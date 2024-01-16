@@ -1,0 +1,45 @@
+Fonction insertion(d e:t, A:abre): entier
+{...}
+debut 
+     si arbrevide(a)
+     	insertion := a
+     tantque (e != a^.etiquette)
+     	si (e < etiquette_noeud)
+     		insertion( a^fg, e)
+     	sinon
+     		insertion(a^fd,e)
+fin
+
+
+
+fonction serachKey (d e: t, A: ABR):booleen
+{...}
+debut 
+    si arbrevide(a)
+       serachKey: faux
+    finsi
+
+    si ( x = a^etiquette_noeud)
+        serachKey:=vrai
+    finsi
+
+    si (x < a^etiquette_noeud)
+        serachKey: serachKey(A^fg,e)
+    finsi
+    
+    sinon
+        serachKey:= serachKey(a^fd,e)
+    finsi
+fin
+
+
+Procedure addLeftSon (d a:arbre, d e:t )
+{...}
+debut
+	si ( a != nil )
+		allouer(a^fg)
+		(a^fg)^.etiquette_noeud = e
+		(a^fg)^.fg := nil
+		(a^fg)^.fd := nil
+	finsi
+fin

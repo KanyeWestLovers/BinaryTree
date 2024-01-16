@@ -1,0 +1,65 @@
+Fonction creernoeud (d e:t): Arbre
+{...}
+Var a: Arbre
+debut
+    allouer a
+    a^.valeur := e
+    a^.fg := nil
+    a^.fd :=nil
+    creernoeud := a
+fin
+
+Procédure prefixe (d a:Arbre)
+{...}
+debut
+    si ( a!= nil)
+        afficher( a^etiquetenoeud)
+    si  ( a^fg != nil)
+        prefixe( a^.fg)
+    si ( a^fd != nil)
+        prefixe ( a^.fd)
+    fin si
+fin
+
+Fonction NoeudFeuille (d A:arbre): bool
+{...}
+debut
+    Noeud := ( a^.fg = nil et a^.fd = nil)
+fin
+   
+    
+
+Fonction addLeftSon ( d e:t):Arbre
+//algo qui permet d'ajouter un fils gauche de valeur e à un noeud 
+{...}
+debut
+    alloeur A
+    creernoeud(a)
+    si ( a^fg != nil )
+        addLeftSon := e
+    fin si 
+fin
+
+
+Procedure addNoeud ( d a:Arbre, d e:t)
+{...}
+debut
+  si ( a!= nil)
+    allouer ( a^.fg)
+    ( a^.fg)^eiquette_noeud :=e
+    ( a^.fg)^.fg := nil
+    ( a^.fg)^.fd := nil
+  finsi
+fin
+
+
+Fonction taille ( d a:Arbre):entier
+{...}
+debut
+   si (a = nil)
+      taille : =0
+   taille := 1+taille(a^.fg) + taille(a^fd)
+fin
+
+
+    
